@@ -7,6 +7,9 @@
   <div><button @click="submit()">登录</button></div>
 </template>
 <script>
+// 引入库文件
+import event from "../modules/event.js";
+
 export default {
   data() {
     return {
@@ -35,6 +38,12 @@ export default {
         return false;
       }
     },
+  },
+  mounted() {
+    //   on方法监听广播，login是监听的自定义广播事件，data是接收传递过来的参数
+    event.on("login", (data) => {
+      console.log(data);
+    });
   },
 };
 </script>
