@@ -1,15 +1,19 @@
 <template>
   <div>{{ val }}</div>
+  <v-main></v-main>
 </template>
 
 <script>
+import Main from "./components/09main";
 export default {
   data() {
     return {
-      val: "hello",
+      val: "App",
     };
   },
-  methods: {},
+  components: {
+    "v-main": Main,
+  },
 };
 </script>
 
