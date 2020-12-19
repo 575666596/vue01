@@ -10,9 +10,11 @@
     <a href="https://cn.bing.com/" target="_blank" @click="prevent($event)">跳转</a>
   </div>
   <div><a href="https://cn.bing.com/" target="_blank" @click.prevent="">跳转</a></div>
-  <!-- 5.按键修饰符 好处是只有按下回车键才会触发方法，事件对象任意键都会触发-->
+  <!-- 5.按键修饰符 好处是只有按下空格键才会触发方法，事件对象任意键都会触发-->
   <input type="text" @keyup="doSearch($event)" />
   <input type="text" @keyup.space="space()" />
+  <!-- 6.去空格修饰符trim -->
+  <div><input type="text" v-model.trim="text" />{{ text }}</div>
 </template>
 
 <script>
@@ -27,6 +29,7 @@ export default {
   data() {
     return {
       val: "hello",
+      text: "",
     };
   },
   methods: {
