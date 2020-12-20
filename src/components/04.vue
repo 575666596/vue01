@@ -22,7 +22,7 @@
     <li>
       城市：
       <select v-model="userinfo.city">
-        <!-- value要属性绑定 -->
+        <!-- value要进行属性绑定 -->
         <option v-for="(item, index) in userinfo.cityList" :key="index" :value="item">
           {{ item }}
         </option>
@@ -38,7 +38,7 @@
     </li>
     <li>
       备注：
-      <textarea rows="" cols="" v-model="userinfo.mark"></textarea>
+      <textarea v-model="userinfo.mark"></textarea>
     </li>
   </ul>
   <!-- pre表示原样输出 -->

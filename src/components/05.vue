@@ -60,6 +60,7 @@ export default {
       this.msg = "水浒传";
     },
   },
+  // 计算属性是对变量的进一步封装
   computed: {
     // reverseMsg可以当做一个变量使用，变量值就是函数返回值
     reverseMsg() {
