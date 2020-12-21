@@ -12,6 +12,4 @@ const storage = {
 }
 
 // 2.导出
-export {
-    storage
-}
+export default storage

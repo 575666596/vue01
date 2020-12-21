@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import Main from "./components/12main";
+import Main from "./components/14main";
 export default {
   data() {
     return {
